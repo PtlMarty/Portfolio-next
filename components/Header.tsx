@@ -14,7 +14,7 @@ const Header: FC<HeaderProps> = ({ onSectionChange }) => {
         À propos
       </button>
       <button
-        onClick={() => onSectionChange("cardSection")}
+        onClick={() => onSectionChange("skillsSection")}
         className="hover:semibold"
       >
         Skills

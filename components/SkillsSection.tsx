@@ -2,7 +2,7 @@ import Image from "next/image";
 import CardItems from "./CardItems";
 import { Progress } from "./ui/progress";
 
-const CardSection = () => {
+const SkillsSection = () => {
   return (
     <>
       <section id="skills">
@@ -66,4 +66,4 @@ const CardSection = () => {
   );
 };
 
-export default CardSection;
+export default SkillsSection;
