@@ -36,30 +36,27 @@ const SkillsSection = () => {
       width: 70,
       height: 70,
     },
-
     { src: "/GraphQL_logo.svg", alt: "graphQL logo", width: 70, height: 70 },
     { src: "/Git_logo.svg", alt: "git logo", width: 120, height: 120 },
     { src: "/Figma_logo.svg", alt: "figma logo", width: 50, height: 50 },
   ];
 
-  // TODO: Ajouter des animations lorsque le curseur passe sur une carte de compétence
-  // TODO: Ajouter des animations lorsque le curseur passe sur une carte d'outil
-
   return (
-    <section id="skills" className="w-full items-center">
-      <div className="grid grid-cols-5 sm:grid-cols-3 md:grid-cols-5 px-4 mt-6">
+    <section id="skills" className="w-full flex flex-col items-center px-4">
+      {/* Skills section */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-6">
         {skillsData.map((skill, index) => (
           <SkillCard key={index} {...skill} />
         ))}
       </div>
 
       <div className="w-full h-[2px] bg-gray-300 my-8"></div>
-      <div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 3 px-4">
-          {toolsSkillsData.map((skill, index) => (
-            <SkillCard key={index} {...skill} />
-          ))}
-        </div>
+
+      {/* Tools section */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        {toolsSkillsData.map((skill, index) => (
+          <SkillCard key={index} {...skill} />
+        ))}
       </div>
     </section>
   );
