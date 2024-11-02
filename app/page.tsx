@@ -8,8 +8,8 @@ export default function Home() {
       <Particles
         className="absolute top-0 left-0 w-full h-full"
         quantity={300}
-        ease={10}
-        staticity={100}
+        ease={50}
+        staticity={10}
         color={"#3ac58f"}
         size={2}
         refresh

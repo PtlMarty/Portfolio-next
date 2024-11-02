@@ -8,13 +8,13 @@ const Contact = () => {
   return (
     <div className="flex mt-3 gap-4">
       <Link href="">
-        <Github color="black" />
+        <Github className="hover:scale-110 hover:text-[#3ac58f] transition-transform transition-colors duration-300" />
       </Link>
       <Link href="">
-        <Linkedin color="black" />
+        <Linkedin className="hover:scale-110 hover:text-[#3ac58f] transition-transform transition-colors duration-300" />
       </Link>
       <Link href="">
-        <LucideMail color="black" />
+        <LucideMail className="hover:scale-110 hover:text-[#3ac58f] transition-transform transition-colors duration-300" />
       </Link>
     </div>
   );

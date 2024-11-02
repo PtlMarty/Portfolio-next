@@ -50,7 +50,7 @@ const ProjectSection = () => {
 
   return (
     <section id="skills">
-      <div className="flex gap-2 justify-evenly  m-3">
+      <div className="flex gap-2 justify-evenly  m-4">
         {projetData.map((project, index) => (
           <CardItems
             key={index}
@@ -58,7 +58,6 @@ const ProjectSection = () => {
             classname="p-4 flex flex-col gap-3 items-center"
           />
         ))}
-        e
       </div>
     </section>
   );

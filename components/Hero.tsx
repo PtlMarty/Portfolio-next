@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import About from "./About";
 import Contact from "./Contact";
-import Header from "./Header";
+import MenuList from "./MenuList";
 import ProjectSection from "./ProjectSection";
 import SkillsSection from "./SkillsSection";
 
@@ -30,7 +30,7 @@ const Hero = () => {
           />
           <h3 className="text-xl font-bold mt-4">PORTAL MARTIN</h3>
           <p className="text-gray-600">Fullstack Web Developer</p>
-          <Header onSectionChange={handleSectionChange} />
+          <MenuList onSectionChange={handleSectionChange} />
           <Contact />
         </div>
         {/* Vertical separator line */}

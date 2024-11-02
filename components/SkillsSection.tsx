@@ -3,12 +3,6 @@ import SkillCard from "./SkillCard";
 const SkillsSection = () => {
   const skillsData = [
     {
-      src: "/Javascript_logo.svg",
-      alt: "JavaScript logo",
-      width: 70,
-      height: 70,
-    },
-    {
       src: "/TypeScript_logo.svg",
       alt: "TypeScript logo",
       width: 70,
@@ -18,8 +12,14 @@ const SkillsSection = () => {
     { src: "/React_logo.svg", alt: "React logo", width: 70, height: 70 },
     { src: "/Ruby_logo.svg", alt: "Ruby logo", width: 70, height: 70 },
     { src: "/rails_logo.svg", alt: "Rails logo", width: 110, height: 110 },
-    { src: "/CSS_logo.svg", alt: "CSS logo", width: 70, height: 70 },
+    {
+      src: "/Javascript_logo.svg",
+      alt: "JavaScript logo",
+      width: 70,
+      height: 70,
+    },
     { src: "/HTML_logo.svg", alt: "HTML logo", width: 70, height: 70 },
+    { src: "/CSS_logo.svg", alt: "CSS logo", width: 70, height: 70 },
     {
       src: "/Tailwind_CSS_logo.svg",
       alt: "Tailwind CSS logo",
@@ -37,7 +37,7 @@ const SkillsSection = () => {
       height: 70,
     },
 
-    { src: "/GraphQL_logo.svg", alt: "graphQL logo", width: 120, height: 120 },
+    { src: "/GraphQL_logo.svg", alt: "graphQL logo", width: 70, height: 70 },
     { src: "/Git_logo.svg", alt: "git logo", width: 120, height: 120 },
     { src: "/Figma_logo.svg", alt: "figma logo", width: 50, height: 50 },
   ];
@@ -47,7 +47,7 @@ const SkillsSection = () => {
 
   return (
     <section id="skills" className="w-full items-center">
-      <div className="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 3 px-4 mt-6">
+      <div className="grid grid-cols-5 sm:grid-cols-3 md:grid-cols-5 px-4 mt-6">
         {skillsData.map((skill, index) => (
           <SkillCard key={index} {...skill} />
         ))}
