@@ -1,68 +1,64 @@
-import Image from "next/image";
-import CardItems from "./CardItems";
-import { Progress } from "./ui/progress";
+import SkillCard from "./SkillCard";
 
 const SkillsSection = () => {
-  return (
-    <>
-      <section id="skills">
-        <div className="flex gap-6 flex-wrap justify-evenly bg-transparent">
-          <CardItems
-            cardTitle="Javascript"
-            // classname="w-[200] h-[200px] items-center flex gap-3 flex-col"
-            cardContent={
-              <>
-                <Image
-                  src="/Javascript_logo.svg"
-                  alt="logo"
-                  width={100}
-                  height={100}
-                />
-                <Progress value={80} className="mt-2" />
-              </>
-            }
-          />
+  const skillsData = [
+    {
+      src: "/Javascript_logo.svg",
+      alt: "JavaScript logo",
+      width: 70,
+      height: 70,
+    },
+    {
+      src: "/TypeScript_logo.svg",
+      alt: "TypeScript logo",
+      width: 70,
+      height: 70,
+    },
+    { src: "/nextjs_logo.svg", alt: "Next.js logo", width: 70, height: 70 },
+    { src: "/React_logo.svg", alt: "React logo", width: 70, height: 70 },
+    { src: "/Ruby_logo.svg", alt: "Ruby logo", width: 70, height: 70 },
+    { src: "/rails_logo.svg", alt: "Rails logo", width: 110, height: 110 },
+    { src: "/CSS_logo.svg", alt: "CSS logo", width: 70, height: 70 },
+    { src: "/HTML_logo.svg", alt: "HTML logo", width: 70, height: 70 },
+    {
+      src: "/Tailwind_CSS_logo.svg",
+      alt: "Tailwind CSS logo",
+      width: 70,
+      height: 70,
+    },
+  ];
 
-          <CardItems
-            cardTitle="Ruby"
-            // classname="w-[200] h-[200px] items-center flex flex-col"
-            cardContent={
-              <Image src="/Ruby_logo.svg" alt="logo" width={100} height={100} />
-            }
-            logoHeight={100}
-            logoWidth={100}
-          />
-          <CardItems
-            cardTitle="React"
-            // classname="w-[200] h-[200px] items-center flex flex-col"
-            cardContent={
-              <Image
-                src="/React_logo.svg"
-                alt="logo"
-                width={100}
-                height={100}
-              />
-            }
-            logoHeight={100}
-            logoWidth={100}
-          />
-          <CardItems
-            cardTitle="TypeScript"
-            // classname="w-[200] h-[200px] items-center flex flex-col"
-            cardContent={
-              <Image
-                src="/TypeScript_logo.svg"
-                alt="logo"
-                width={100}
-                height={100}
-              />
-            }
-            logoHeight={100}
-            logoWidth={100}
-          />
+  const toolsSkillsData = [
+    { src: "/Heroku_logo.svg", alt: "Heroku logo", width: 120, height: 120 },
+    {
+      src: "/postgresql-logo.svg",
+      alt: "postgreSQL logo",
+      width: 70,
+      height: 70,
+    },
+
+    { src: "/GraphQL_logo.svg", alt: "graphQL logo", width: 120, height: 120 },
+    { src: "/Git_logo.svg", alt: "git logo", width: 120, height: 120 },
+    { src: "/Figma_logo.svg", alt: "figma logo", width: 50, height: 50 },
+  ];
+
+  return (
+    <section id="skills" className="w-full items-center">
+      <div className="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 3 px-4 mt-6">
+        {skillsData.map((skill, index) => (
+          <SkillCard key={index} {...skill} />
+        ))}
+      </div>
+
+      <div className="w-full h-[2px] bg-gray-300 my-8"></div>
+      <div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 3 px-4">
+          {toolsSkillsData.map((skill, index) => (
+            <SkillCard key={index} {...skill} />
+          ))}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

@@ -1,27 +1,25 @@
-import { FC } from "react";
-
 interface HeaderProps {
   onSectionChange: (section: string) => void;
 }
 
-const Header: FC<HeaderProps> = ({ onSectionChange }) => {
+const Header = ({ onSectionChange }: HeaderProps) => {
   return (
-    <div className="flex flex-col items-center my-3">
+    <div className="flex flex-col items-center my-3 gap-2">
       <button
         onClick={() => onSectionChange("about")}
-        className="hover:semibold"
+        className="font-semibold hover:text-[#3ac58f] focus:text-[#3ac58f]"
       >
         À propos
       </button>
       <button
         onClick={() => onSectionChange("skillsSection")}
-        className="hover:semibold"
+        className="font-semibold hover:text-[#3ac58f] focus:text-[#3ac58f]"
       >
         Skills
       </button>
       <button
         onClick={() => onSectionChange("projectSection")}
-        className="hover:semibold"
+        className="font-semibold hover:text-[#3ac58f] focus:text-[#3ac58f]"
       >
         Projets
       </button>
