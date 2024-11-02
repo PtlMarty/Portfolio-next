@@ -42,6 +42,9 @@ const SkillsSection = () => {
     { src: "/Figma_logo.svg", alt: "figma logo", width: 50, height: 50 },
   ];
 
+  // TODO: Ajouter des animations lorsque le curseur passe sur une carte de compétence
+  // TODO: Ajouter des animations lorsque le curseur passe sur une carte d'outil
+
   return (
     <section id="skills" className="w-full items-center">
       <div className="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 3 px-4 mt-6">

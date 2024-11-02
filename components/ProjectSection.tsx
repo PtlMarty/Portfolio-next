@@ -1,30 +1,64 @@
+"use client";
+
+import Link from "next/link";
 import CardItems from "./CardItems";
+import { Button } from "./ui/button";
 
 const ProjectSection = () => {
+  const projetData = [
+    {
+      cardTitle: "Easy Driving",
+      cardDescription:
+        "Easy Driving est une application web qui permet de trouver des conducteur prive de chez vous.",
+      cardFooter: (
+        <>
+          <Button>
+            <Link href="https://easy-driving.com">View</Link>
+          </Button>
+        </>
+      ),
+    },
+    {
+      cardTitle: "Kitakits",
+      cardDescription:
+        "Kitakits est une application web qui permet de trouver des personnes experimente sur un sujet.",
+      cardFooter: (
+        <>
+          <Button>
+            <Link href="https://easy-driving.com">View</Link>
+          </Button>
+        </>
+      ),
+    },
+    {
+      cardTitle: "Dyonisus",
+      cardDescription:
+        "Dyonisus est une application web qui permet de trouver des sommelier prive a domicile.",
+      cardFooter: (
+        <>
+          <Button>
+            <Link href="https://easy-driving.com">View</Link>
+          </Button>
+        </>
+      ),
+    },
+  ];
+
+  // TODO Ajouter une image sur chaque projet
+  // TODO Ajouter un lien vers la page du projet sur chaque carte
+  // TODO Ajouter une animation lorsque le curseur passe sur une carte
+
   return (
     <section id="skills">
-      <div className="flex gap-2 justify-evenly bg-transparent">
-        <CardItems
-          cardTitle="Easy Driving"
-          classname="w-[300px] h-[200px] items-center flex flex-col"
-          logoHeight={100}
-          logoWidth={100}
-          cardContent="Easy Driving est une application web qui permet de trouver des conducteur prive de chez vous."
-        />
-        <CardItems
-          cardTitle="Kitakits"
-          classname="w-[300px] h-[200px] items-center flex flex-col"
-          logoHeight={100}
-          logoWidth={100}
-          cardContent="Kitakits est une application web qui permet de trouver des personnes experimente sur un sujet."
-        />
-        <CardItems
-          cardTitle="Dyonisus"
-          classname="w-[300px] h-[200px] items-center flex flex-col"
-          cardContent="Dyonisus est une application web qui permet de trouver des sommelier prive a domicile."
-          logoHeight={100}
-          logoWidth={100}
-        />
+      <div className="flex gap-2 justify-evenly  m-3">
+        {projetData.map((project, index) => (
+          <CardItems
+            key={index}
+            {...project}
+            classname="p-4 flex flex-col gap-3 items-center"
+          />
+        ))}
+        e
       </div>
     </section>
   );

@@ -3,6 +3,8 @@ interface HeaderProps {
 }
 
 const Header = ({ onSectionChange }: HeaderProps) => {
+  //TODO Ajouter une animation lorsque le curseur passe sur un bouton?
+
   return (
     <div className="flex flex-col items-center my-3 gap-2">
       <button
