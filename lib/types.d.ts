@@ -1,9 +1,14 @@
-export interface CardProps {
+interface CardProps {
+  cardClass?: string;
   cardTitle?: string;
+  titleClass?: string;
   cardContent?: React.ReactNode | string;
-  classname?: string | undefined;
+  contentClass?: string;
   cardDescription?: string;
+  descriptionClass?: string;
   cardFooter?: string | React.ReactNode;
+  footerClass?: string;
+  cardImage?: string; // Add cardImage prop
 }
 
 export interface SkillTypes {

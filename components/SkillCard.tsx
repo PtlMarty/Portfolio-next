@@ -4,7 +4,7 @@ import CardItems from "./CardItems";
 
 const SkillCard = ({ src, alt, width, height }: SkillTypes) => (
   <CardItems
-    classname="flex flex-col items-center border-none shadow-none justify-center w-full p-4 bg-transparent" // Added bg-transparent
+    cardClass="flex flex-col items-center border-none shadow-none justify-center w-full p-4 bg-transparent" // Added bg-transparent
     cardContent={
       <>
         <Image src={src} alt={alt} width={width} height={height} />

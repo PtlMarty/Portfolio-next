@@ -3,39 +3,52 @@ import Link from "next/link";
 
 export const projetData = [
   {
+    cardImage: "/road_driving.jpg",
     cardTitle: "Easy Driving",
     cardDescription:
-      "Easy Driving est une application web qui permet de trouver des conducteur prive de chez vous.",
+      "Easy Driving is a web application that allows you to find private drivers from home.",
     cardFooter: (
-      <>
-        <Button>
-          <Link href="https://easy-driving.com">View</Link>
-        </Button>
-      </>
+      <Button className="hover:scale-110 transition-transform duration-300">
+        <Link className="font-semibold" href="" rel="noopener noreferrer">
+          On progress
+        </Link>
+      </Button>
     ),
   },
   {
+    cardImage: "/kitakits_img.jpg",
     cardTitle: "Kitakits",
     cardDescription:
-      "Kitakits est une application web qui permet de trouver des personnes experimente sur un sujet.",
+      "Kitakits is a web application that allows you to find experienced people on a subject.",
     cardFooter: (
-      <>
-        <Button>
-          <Link href="https://easy-driving.com">View</Link>
-        </Button>
-      </>
+      <Button className="hover:scale-110 transition-transform duration-300">
+        <Link
+          className="font-semibold"
+          href="https://kitakitsme-9f2c7f35760b.herokuapp.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View
+        </Link>
+      </Button>
     ),
   },
   {
+    cardImage: "/dyonisus_img.jpg",
     cardTitle: "Dyonisus",
     cardDescription:
-      "Dyonisus est une application web qui permet de trouver des sommelier prive a domicile.",
+      "Dyonisus is a web application that allows you to find private sommeliers at home.",
     cardFooter: (
-      <>
-        <Button>
-          <Link href="https://easy-driving.com">View</Link>
-        </Button>
-      </>
+      <Button className="hover:scale-110 transition-transform duration-300">
+        <Link
+          className="font-semibold"
+          href="https://dionysus-ptlmarty-bdaa44666ef5.herokuapp.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View
+        </Link>
+      </Button>
     ),
   },
 ];

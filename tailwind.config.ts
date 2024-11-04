@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 const config: Config = {
   darkMode: ["class"],
@@ -81,7 +82,10 @@ const config: Config = {
         },
       },
     },
+    backgroundImage: {
+      road: "url('public/road_driving.jpg')",
+    },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 };
 export default config;

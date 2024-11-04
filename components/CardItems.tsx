@@ -1,3 +1,4 @@
+import { CardProps } from "@/lib/types";
 import {
   Card,
   CardContent,
@@ -6,30 +7,32 @@ import {
   CardTitle,
 } from "./ui/card";
 
-interface CardProps {
-  cardTitle?: string;
-  cardContent?: React.ReactNode | string;
-  classname?: string | undefined;
-  cardDescription?: string;
-  cardFooter?: string | React.ReactNode;
-}
-
 const CardItems = ({
+  cardClass,
   cardTitle,
+  titleClass,
   cardContent,
+  contentClass,
   cardDescription,
+  descriptionClass,
   cardFooter,
-  classname,
+  footerClass,
+  cardImage, // Destructure cardImage
 }: CardProps) => {
   return (
-    <div>
-      <Card className={`${classname} `}>
-        {cardTitle && <CardTitle>{cardTitle}</CardTitle>}
-        <CardContent>{cardContent}</CardContent>
-        <CardDescription>{cardDescription}</CardDescription>
-        <CardFooter>{cardFooter}</CardFooter>
-      </Card>
-    </div>
+    <Card
+      className={`${cardClass} ${cardImage ? "bg-cover bg-center" : ""}`}
+      style={cardImage ? { backgroundImage: `url(${cardImage})` } : undefined}
+    >
+      {cardTitle && <CardTitle className={titleClass}>{cardTitle}</CardTitle>}
+      <CardContent className={contentClass}>{cardContent}</CardContent>
+      {cardDescription && (
+        <CardDescription className={descriptionClass}>
+          {cardDescription}
+        </CardDescription>
+      )}
+      <CardFooter className={footerClass}>{cardFooter}</CardFooter>
+    </Card>
   );
 };
 
