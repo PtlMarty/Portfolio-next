@@ -1,12 +1,6 @@
+import { SkillTypes } from "@/lib/types";
 import Image from "next/image";
 import CardItems from "./CardItems";
-
-declare interface SkillTypes {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-}
 
 const SkillCard = ({ src, alt, width, height }: SkillTypes) => (
   <CardItems

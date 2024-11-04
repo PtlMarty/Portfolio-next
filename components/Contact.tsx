@@ -7,13 +7,16 @@ const Contact = () => {
 
   return (
     <div className="flex mt-3 gap-4">
-      <Link href="">
+      <Link href="https://github.com/PtlMarty" target="_blank">
         <Github className="hover:scale-110 hover:text-[#3ac58f] transition-transform transition-colors duration-300" />
       </Link>
-      <Link href="">
+      <Link
+        href="https://www.linkedin.com/in/martin-portal-292b12289/"
+        target="_blank"
+      >
         <Linkedin className="hover:scale-110 hover:text-[#3ac58f] transition-transform transition-colors duration-300" />
       </Link>
-      <Link href="">
+      <Link href="mailto:ptl_martin@yahoo.co.jp">
         <LucideMail className="hover:scale-110 hover:text-[#3ac58f] transition-transform transition-colors duration-300" />
       </Link>
     </div>

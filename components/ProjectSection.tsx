@@ -1,57 +1,19 @@
 "use client";
 
-import Link from "next/link";
+import { projetData } from "@/lib/data";
+import { CardProps } from "@/lib/types";
 import CardItems from "./CardItems";
-import { Button } from "./ui/button";
 
-const ProjectSection = () => {
-  const projetData = [
-    {
-      cardTitle: "Easy Driving",
-      cardDescription:
-        "Easy Driving est une application web qui permet de trouver des conducteur prive de chez vous.",
-      cardFooter: (
-        <>
-          <Button>
-            <Link href="https://easy-driving.com">View</Link>
-          </Button>
-        </>
-      ),
-    },
-    {
-      cardTitle: "Kitakits",
-      cardDescription:
-        "Kitakits est une application web qui permet de trouver des personnes experimente sur un sujet.",
-      cardFooter: (
-        <>
-          <Button>
-            <Link href="https://easy-driving.com">View</Link>
-          </Button>
-        </>
-      ),
-    },
-    {
-      cardTitle: "Dyonisus",
-      cardDescription:
-        "Dyonisus est une application web qui permet de trouver des sommelier prive a domicile.",
-      cardFooter: (
-        <>
-          <Button>
-            <Link href="https://easy-driving.com">View</Link>
-          </Button>
-        </>
-      ),
-    },
-  ];
+// TODO Add an image to each project
+// TODO Add a link to the project page on each card
+// TODO Add an animation when the cursor hovers over a card
 
-  // TODO Ajouter une image sur chaque projet
-  // TODO Ajouter un lien vers la page du projet sur chaque carte
-  // TODO Ajouter une animation lorsque le curseur passe sur une carte
-
+const ProjectSection = ({ projectData }: { projectData?: CardProps[] }) => {
+  const localData = projectData || projetData;
   return (
     <section id="skills">
       <div className="flex gap-2 justify-evenly  m-4">
-        {projetData.map((project, index) => (
+        {localData.map((project: CardProps, index: number) => (
           <CardItems
             key={index}
             {...project}
