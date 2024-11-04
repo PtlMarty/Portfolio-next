@@ -4,7 +4,7 @@ interface MenuListProps {
 
 const MenuList = ({ onSectionChange }: MenuListProps) => {
   return (
-    <div className="flex flex-col items-center my-3 gap-2">
+    <div className="flex md:flex-col items-center md:my-3 gap-2">
       <button
         onClick={() => onSectionChange("about")}
         className="font-bold hover:text-[#3ac58f] focus:text-[#3ac58f]"
