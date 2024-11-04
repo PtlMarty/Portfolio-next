@@ -55,7 +55,7 @@ export const projetData = [
 
 export const skillsData = [
   {
-    src: "/TypeScript_logo.svg",
+    src: "/Typescript_logo.svg",
     alt: "TypeScript logo",
     width: 70,
     height: 70,
@@ -73,7 +73,7 @@ export const skillsData = [
   { src: "/HTML_logo.svg", alt: "HTML logo", width: 70, height: 70 },
   { src: "/CSS_logo.svg", alt: "CSS logo", width: 70, height: 70 },
   {
-    src: "/Tailwind_CSS_logo.svg",
+    src: "/Tailwind_CSS_Logo.svg",
     alt: "Tailwind CSS logo",
     width: 70,
     height: 70,
@@ -88,7 +88,7 @@ export const toolsSkillsData = [
     width: 70,
     height: 70,
   },
-  { src: "/GraphQL_logo.svg", alt: "graphQL logo", width: 70, height: 70 },
+  { src: "/GraphQL_Logo.svg", alt: "graphQL logo", width: 70, height: 70 },
   { src: "/Git_logo.svg", alt: "git logo", width: 120, height: 120 },
   { src: "/Figma_logo.svg", alt: "figma logo", width: 50, height: 50 },
 ];
