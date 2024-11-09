@@ -18,8 +18,9 @@ export default function Home() {
       />
 
       {/* Hero component */}
-      <div className="relative z-10 w-screen h-screen overflow-y-auto bg-transparent">
+      <div className="relative w-screen h-screen overflow-y-auto bg-transparent">
         <Hero />
+        {/* <SimpleScrollTest /> */}
       </div>
     </div>
   );

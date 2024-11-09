@@ -11,12 +11,15 @@ const MenuList = ({ onSectionChange }: MenuListProps) => {
       >
         À propos
       </button>
+      <div className="h-full w-[2px] bg-gray-800"></div>
       <button
         onClick={() => onSectionChange("skillsSection")}
         className="font-bold hover:text-[#3ac58f] focus:text-[#3ac58f]"
       >
         Skills
       </button>
+      <div className="h-full w-[2px] bg-gray-800"></div>
+
       <button
         onClick={() => onSectionChange("projectSection")}
         className="font-bold hover:text-[#3ac58f] focus:text-[#3ac58f]"
