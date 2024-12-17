@@ -20,15 +20,6 @@ const About = () => {
           bring to every project. Let’s collaborate to turn your vision into
           reality!
         </p>
-        <p className="text-sm md:text-md leading-relaxed font-semibold mt-4">
-          こんにちは、ポータル・マーティンです — ウェブ開発者 & 課題解決者
-          機能性、パフォーマンス、そしてクリーンなコードに重点を置き、使いやすいウェブアプリケーションやECプラットフォームを構築しています。HTML、CSS、JavaScript、React、Ruby
-          on Rails
-          の確かなスキルを活かし、アイデアをインタラクティブで効果的なデジタルソリューションへと変えます。
-          現在は Golang
-          も学びながら、自身のプロジェクトに取り組むとともに、フリーランスとして企業のオンラインプレゼンス向上をサポートしています。ホスピタリティ業界での経験を通じて培ったコミュニケーション力、適応力、問題解決能力をすべてのプロジェクトに活かしています。
-          あなたのビジョンを現実に変えるお手伝いをさせてください！
-        </p>
       </div>
       <div className="hidden md:block w-[500px] h-[2px] bg-gray-300 mt-16"></div>
 
