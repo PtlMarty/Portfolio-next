@@ -7,18 +7,27 @@ const About = () => {
       <div className="flex flex-col text-center items-center w-full max-w-2xl">
         <h2 className="text-4xl font-bold mb-4">About me</h2>
         <p className="text-sm md:text-md leading-relaxed font-semibold">
-          With a background in hospitality and a recent transition into frontend
-          development, I’m a customer-focused developer dedicated to crafting
-          digital experiences that feel personal and intuitive. Years of working
-          directly with people have given me a keen understanding of what users
-          value most: ease, connection, and satisfaction.
+          Hi, I’m Portal Martin — Web Developer & Problem Solver
+          <br /> I specialize in building user-friendly web applications and
+          e-commerce platforms with a focus on functionality, performance, and
+          clean code. With a solid foundation in HTML, CSS, JavaScript, React,
+          and Ruby on Rails, I transform ideas into interactive, impactful
+          digital solutions.
+          <br /> I’m also expanding my skills with Golang while creating my own
+          projects and helping businesses enhance their online presence as a
+          freelancer. My experience in the hospitality industry has strengthened
+          my communication, adaptability, and problem-solving skills, which I
+          bring to every project. Let’s collaborate to turn your vision into
+          reality!
         </p>
-        <p className="text-sm md:text-md leading-relaxed font-semibold mt-3">
-          Drawing from my experience in fostering meaningful relationships, I’m
-          eager to bring this relational mindset into tech. My goal is to
-          develop user-friendly, accessible digital solutions that prioritize
-          both form and function, delivering a seamless experience that users
-          truly enjoy.
+        <p className="text-sm md:text-md leading-relaxed font-semibold mt-4">
+          こんにちは、ポータル・マーティンです — ウェブ開発者 & 課題解決者
+          機能性、パフォーマンス、そしてクリーンなコードに重点を置き、使いやすいウェブアプリケーションやECプラットフォームを構築しています。HTML、CSS、JavaScript、React、Ruby
+          on Rails
+          の確かなスキルを活かし、アイデアをインタラクティブで効果的なデジタルソリューションへと変えます。
+          現在は Golang
+          も学びながら、自身のプロジェクトに取り組むとともに、フリーランスとして企業のオンラインプレゼンス向上をサポートしています。ホスピタリティ業界での経験を通じて培ったコミュニケーション力、適応力、問題解決能力をすべてのプロジェクトに活かしています。
+          あなたのビジョンを現実に変えるお手伝いをさせてください！
         </p>
       </div>
       <div className="hidden md:block w-[500px] h-[2px] bg-gray-300 mt-16"></div>
@@ -48,12 +57,30 @@ const About = () => {
               <ContactInfos label="Email:" value="ptl_martin@yahoo.co.jp" />
             </div>
           </div>
-          <Button
-            onClick={() => window.open("/Portal_Martin.pdf", "_blank")}
-            className="mt-6 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/70 transition duration-200"
-          >
-            My Resume
-          </Button>
+          <div className="flex gap-5">
+            <Button
+              onClick={() =>
+                window.open("/Resume20241208 PORTAL MARTIN.pdf", "_blank")
+              }
+              className="mt-6 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/70 transition duration-200"
+            >
+              My Resume
+            </Button>
+            <Button
+              onClick={() => window.open("/履歴書PORTAL MARTIN.pdf", "_blank")}
+              className="mt-6 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/70 transition duration-200"
+            >
+              履歴書
+            </Button>
+            <Button
+              onClick={() =>
+                window.open("/職務経歴書PORTAL MARTIN.pdf", "_blank")
+              }
+              className="mt-6 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/70 transition duration-200"
+            >
+              職務経歴書
+            </Button>
+          </div>
         </div>
       </div>
     </div>
