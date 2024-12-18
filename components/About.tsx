@@ -4,11 +4,13 @@ import { Button } from "./ui/button";
 const About = () => {
   return (
     <div className="flex　items-center h-full w-full  z-10">
-      <div className="flex  text-center justify-evenly w-full gap-5 p-12">
+      <div className="flex  text-center justify-evenly w-full gap-16 p-8">
         <div className="flex flex-col text-center items-center w-full mt-4">
-          <h3 className="text-2xl font-bold mb-2">
+          <h3 className="text-xl font-bold text-gray-900">
             &quot;Mix Between Hospitality and Technology&quot;
           </h3>
+          <div className="w-full mx-12 h-[1px] bg-gray-500 my-5"></div>
+
           <p className="text-sm leading-relaxed font-medium">
             I specialize in building user-friendly web applications and
             e-commerce platforms with a focus on functionality, performance, and
@@ -35,9 +37,10 @@ const About = () => {
           </p>
         </div>
         <div className="flex flex-col text-center items-center w-full  mt-4">
-          <h3 className="text-xl font-bold mb-4">
+          <h3 className="text-xl font-extrabold text-gray-900">
             「アイディアをカタチにすることに情熱を持っています」
           </h3>
+          <div className="w-full mx-12 h-[1px] bg-gray-500 my-5"></div>
           <p className="text-sm leading-relaxed ">
             6年前に日本に移住し、現在まで飲食業界、
             食品関係の日本企業で働いてきました
@@ -75,7 +78,7 @@ const About = () => {
             {/* Left Column */}
             <div className="flex md:flex-col gap-4 mb-6 md:mb-0">
               <ContactInfos label="Name:" value="PORTAL MARTIN" />
-              <ContactInfos label="Location:" value="Tokyo, Japon" />
+              <ContactInfos label="Location:" value="Tokyo, Japan" />
             </div>
 
             {/* Right Column */}
