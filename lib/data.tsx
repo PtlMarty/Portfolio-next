@@ -4,13 +4,18 @@ import Link from "next/link";
 export const projetData = [
   {
     cardImage: "/road_driving.jpg",
-    cardTitle: "Easy Driving",
+    cardTitle: "Restaurant Helper",
     cardDescription:
-      "Easy Driving is a web application that allows you to find private drivers from home.",
+      "Web application that helps Shops owners to manage their order, inventory, suppliers.",
     cardFooter: (
       <Button className="hover:scale-110 transition-transform duration-300">
-        <Link className="font-semibold" href="" rel="noopener noreferrer">
-          On progress
+        <Link
+          className="font-semibold"
+          href="https://supply-chain-snowy.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View [On Progress]
         </Link>
       </Button>
     ),
