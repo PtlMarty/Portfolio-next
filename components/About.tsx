@@ -104,7 +104,7 @@ const About = () => {
             </Button>
             <Button
               onClick={() =>
-                window.open("/職務経歴書PORTAL MARTIN.pdf", "_blank")
+                window.open("/職務経歴書 PORTAL MARTIN.pdf", "_blank")
               }
               className="mt-6 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/70 transition duration-200"
             >
