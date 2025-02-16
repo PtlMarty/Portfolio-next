@@ -1,6 +1,5 @@
-import ContactInfos from "./ContactInfos";
-import { Button } from "./ui/button";
 import ContactSection from "./ContactSection";
+import { Button } from "./ui/button";
 
 const ResumeButton = ({
   onClick,
@@ -18,8 +17,6 @@ const ResumeButton = ({
 );
 
 const About = () => {
-  const openPdf = (path: string) => window.open(path, "_blank");
-
   return (
     <div className="flex　items-center h-full w-full z-10">
       <div className="flex text-center justify-evenly w-full gap-16 p-8">
