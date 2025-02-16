@@ -1,10 +1,28 @@
 import ContactInfos from "./ContactInfos";
 import { Button } from "./ui/button";
+import ContactSection from "./ContactSection";
+
+const ResumeButton = ({
+  onClick,
+  children,
+}: {
+  onClick: () => void;
+  children: React.ReactNode;
+}) => (
+  <Button
+    onClick={onClick}
+    className="mt-6 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/70 transition duration-200"
+  >
+    {children}
+  </Button>
+);
 
 const About = () => {
+  const openPdf = (path: string) => window.open(path, "_blank");
+
   return (
-    <div className="flex　items-center h-full w-full  z-10">
-      <div className="flex  text-center justify-evenly w-full gap-16 p-8">
+    <div className="flex　items-center h-full w-full z-10">
+      <div className="flex text-center justify-evenly w-full gap-16 p-8">
         <div className="flex flex-col text-center items-center w-full mt-4">
           <h3 className="text-xl font-bold text-gray-900">
             &quot;Mix Between Hospitality and Technology&quot;
@@ -23,7 +41,7 @@ const About = () => {
             I transform ideas into interactive, impactful digital solutions.
             <br />
             <br />
-            I’m also expanding my skills with Golang while creating my own
+            I&apos;m also expanding my skills with Golang while creating my own
             projects and helping businesses enhance their online presence as a
             freelancer.
             <br />
@@ -33,7 +51,7 @@ const About = () => {
             bring to every project.
             <br />
             <br />
-            Let’s collaborate to turn your vision into reality!
+            Let&apos;s collaborate to turn your vision into reality!
           </p>
         </div>
         <div className="flex flex-col text-center items-center w-full  mt-4">
@@ -66,53 +84,12 @@ const About = () => {
             より顧客満足度の高いデジタルソリューションを提供したいと考えています
             <br />
             <br />
-            please don’t hesitate to contact me!!! <br />
+            please don&apos;t hesitate to contact me!!! <br />
             ご連絡をお待ちしております
           </p>
         </div>
       </div>
-      <div>
-        <div className="flex flex-col items-center mt-4">
-          <h3 className="text-2xl font-bold mb-6">Contact</h3>
-          <div className="flex flex-col md:flex-row md:space-x-8 gap-3">
-            {/* Left Column */}
-            <div className="flex md:flex-col gap-4 mb-6 md:mb-0">
-              <ContactInfos label="Name:" value="PORTAL MARTIN" />
-              <ContactInfos label="Location:" value="Tokyo, Japan" />
-            </div>
-
-            {/* Right Column */}
-            <div className="flex md:flex-col gap-4">
-              <ContactInfos label="Phone:" value="080-5188-1989" />
-              <ContactInfos label="Email:" value="ptl_martin@yahoo.co.jp" />
-            </div>
-          </div>
-          <div className="flex gap-5">
-            <Button
-              onClick={() =>
-                window.open("/Resume20241208 PORTAL MARTIN.pdf", "_blank")
-              }
-              className="mt-6 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/70 transition duration-200"
-            >
-              My Resume
-            </Button>
-            <Button
-              onClick={() => window.open("/履歴書PORTAL MARTIN.pdf", "_blank")}
-              className="mt-6 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/70 transition duration-200"
-            >
-              履歴書
-            </Button>
-            <Button
-              onClick={() =>
-                window.open("/職務経歴書 PORTAL MARTIN.pdf", "_blank")
-              }
-              className="mt-6 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/70 transition duration-200"
-            >
-              職務経歴書
-            </Button>
-          </div>
-        </div>
-      </div>
+      <ContactSection />
     </div>
   );
 };

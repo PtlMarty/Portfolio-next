@@ -1,7 +1,22 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export const projetData = [
+// Add proper type definitions
+interface ProjectData {
+  cardImage: string;
+  cardTitle: string;
+  cardDescription: string;
+  cardFooter: React.ReactNode;
+}
+
+interface SkillData {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
+export const projetData: ProjectData[] = [
   {
     cardImage: "/road_driving.jpg",
     cardTitle: "Restaurant Helper",
@@ -58,7 +73,7 @@ export const projetData = [
   },
 ];
 
-export const skillsData = [
+export const skillsData: SkillData[] = [
   {
     src: "/Typescript_logo.svg",
     alt: "TypeScript logo",
@@ -85,7 +100,7 @@ export const skillsData = [
   },
 ];
 
-export const toolsSkillsData = [
+export const toolsSkillsData: SkillData[] = [
   { src: "/Heroku_logo.svg", alt: "Heroku logo", width: 120, height: 120 },
   {
     src: "/postgresql-logo.svg",

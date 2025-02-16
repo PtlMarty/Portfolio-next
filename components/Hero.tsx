@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, Variants } from "framer-motion";
 import { useState } from "react";
 import About from "./About";
 import Contact from "./Contact";
@@ -9,12 +9,34 @@ import Profile from "./Profile";
 import ProjectSection from "./ProjectSection";
 import SkillsSection from "./SkillsSection";
 
-const Hero = () => {
-  const [currentSection, setCurrentSection] = useState<string>("about");
+type SectionType = "about" | "skillsSection" | "projectSection";
 
-  const handleSectionChange = (section: string) => {
+const sectionVariants: Variants = {
+  initial: { opacity: 0, scale: 0.95, y: 20 },
+  animate: { opacity: 1, scale: 1, y: 0 },
+  exit: { opacity: 0, scale: 0.95, y: -20 },
+};
+
+const Hero = () => {
+  const [currentSection, setCurrentSection] = useState<SectionType>("about");
+
+  const handleSectionChange = (section: SectionType) => {
     setCurrentSection(section);
   };
+
+  const renderSection = (key: string, component: React.ReactNode) => (
+    <motion.div
+      key={key}
+      variants={sectionVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={{ duration: 0.4, ease: [0.6, 0.05, 0.2, 0.9] }}
+      className="w-full p-2"
+    >
+      {component}
+    </motion.div>
+  );
 
   return (
     <section className="w-full h-screen flex flex-col md:flex-row justify-start items-center relative">
@@ -36,42 +58,11 @@ const Hero = () => {
       <div className="w-full md:w-3/4 flex flex-col justify-center items-center  z-10">
         <div className="mt-4">
           <AnimatePresence mode="wait">
-            {currentSection === "about" && (
-              <motion.div
-                key="about"
-                initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95, y: -20 }} // Exit upward
-                transition={{ duration: 0.4, ease: [0.6, 0.05, 0.2, 0.9] }}
-                className="w-full p-2"
-              >
-                <About />
-              </motion.div>
-            )}
-            {currentSection === "skillsSection" && (
-              <motion.div
-                key="skillsSection"
-                initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95, y: -20 }} // Exit upward
-                transition={{ duration: 0.4, ease: [0.6, 0.05, 0.2, 0.9] }}
-                className="w-full flex flex-col  justify-center items-center px-4"
-              >
-                <SkillsSection />
-              </motion.div>
-            )}
-            {currentSection === "projectSection" && (
-              <motion.div
-                key="projectSection"
-                initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95, y: -20 }} // Exit upward
-                transition={{ duration: 0.4, ease: [0.6, 0.05, 0.2, 0.9] }}
-                className="w-full"
-              >
-                <ProjectSection />
-              </motion.div>
-            )}
+            {currentSection === "about" && renderSection("about", <About />)}
+            {currentSection === "skillsSection" &&
+              renderSection("skillsSection", <SkillsSection />)}
+            {currentSection === "projectSection" &&
+              renderSection("projectSection", <ProjectSection />)}
           </AnimatePresence>
         </div>
       </div>
