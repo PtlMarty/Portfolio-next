@@ -1,9 +1,6 @@
 import ContactInfos from "./ContactInfos";
-import { ResumeButton } from "./ResumeButton";
 
 const ContactSection = () => {
-  const openPdf = (path: string) => window.open(path, "_blank");
-
   return (
     <div className="flex flex-col items-center mt-4">
       <h3 className="text-2xl font-bold mb-6">Contact</h3>
@@ -19,19 +16,6 @@ const ContactSection = () => {
           <ContactInfos label="Phone:" value="080-5188-1989" />
           <ContactInfos label="Email:" value="ptl_martin@yahoo.co.jp" />
         </div>
-      </div>
-      <div className="flex gap-5">
-        <ResumeButton
-          onClick={() => openPdf("/Resume20241208 PORTAL MARTIN.pdf")}
-        >
-          My Resume
-        </ResumeButton>
-        <ResumeButton onClick={() => openPdf("/履歴書PORTAL MARTIN.pdf")}>
-          履歴書
-        </ResumeButton>
-        <ResumeButton onClick={() => openPdf("/職務経歴書 PORTAL MARTIN.pdf")}>
-          職務経歴書
-        </ResumeButton>
       </div>
     </div>
   );
